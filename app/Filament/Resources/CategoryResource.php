@@ -54,12 +54,12 @@ class CategoryResource extends Resource
                 //
             ])
             ->actions([
+                // Tambahkan action Delete
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(), // Menambahkan tombol delete di tabel
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
